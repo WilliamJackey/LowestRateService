@@ -1,0 +1,7 @@
+C:\sourceCode\example\LowestRateService\LowestRateService\bin\LowestRateService.dll.config
+C:\sourceCode\example\LowestRateService\LowestRateService\bin\LowestRateService.dll
+C:\sourceCode\example\LowestRateService\LowestRateService\bin\LowestRateService.pdb
+C:\sourceCode\example\LowestRateService\LowestRateService\obj\Debug\LowestRateService.csproj.CoreCompileInputs.cache
+C:\sourceCode\example\LowestRateService\LowestRateService\obj\Debug\LowestRateService.dll
+C:\sourceCode\example\LowestRateService\LowestRateService\obj\Debug\LowestRateService.pdb
+C:\sourceCode\example\LowestRateService\LowestRateService\obj\Debug\LowestRateService.csprojResolveAssemblyReference.cache
