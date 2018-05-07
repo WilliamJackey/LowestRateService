@@ -65,14 +65,14 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Data\IinMemoryData.cs" />
-    <Compile Include="Data\inMemoryData.cs" />
+    <Compile Include="Data\IInMemoryData.cs" />
+    <Compile Include="Data\InMemoryData.cs" />
     <Compile Include="LowestRate.asmx.cs">
       <DependentUpon>LowestRate.asmx</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="Model\underwriterInformation.cs" />
-    <Compile Include="Model\underwriterProduct.cs" />
+    <Compile Include="Model\UnderwriterInformation.cs" />
+    <Compile Include="Model\UnderwriterProduct.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup />

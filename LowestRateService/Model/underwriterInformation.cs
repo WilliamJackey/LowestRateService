@@ -2,7 +2,7 @@
 
 namespace MCAP.Nova.LowestRate.Model
 {
-    public class underwriterInformation
+    public class UnderwriterInformation
     {
         public DateTime PeriodEnd { get; set; }
         public DateTime PeriodStart { get; set; }

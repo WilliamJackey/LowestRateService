@@ -9,13 +9,13 @@ namespace MCAP.Nova.LowestRate.TestData
     /// <summary>
     /// Summary description for inMemoryData
     /// </summary>
-    public class inMemoryData : IinMemoryData
+    public class InMemoryData : IInMemoryData
     {
-        public IQueryable<underwriterInformation> getProductData()
+        public IQueryable<UnderwriterInformation> getProductData()
         {
-            return new List<underwriterInformation>
+            return new List<UnderwriterInformation>
             {
-                new underwriterInformation
+                new UnderwriterInformation
                 {
                     PeriodEnd = new DateTime(2016, 9, 14, 23, 59, 59),
                     PeriodStart = new DateTime(2016, 9, 1, 0, 0, 0),
@@ -24,7 +24,7 @@ namespace MCAP.Nova.LowestRate.TestData
                     Program = "Standard",
                     ProgramRateAdjustment = -0.05
                 },
-                new underwriterInformation
+                new UnderwriterInformation
                 {
                     PeriodEnd = new DateTime(2016, 9, 14, 23, 59, 59),
                     PeriodStart = new DateTime(2016, 9, 1, 0, 0, 0),
@@ -33,7 +33,7 @@ namespace MCAP.Nova.LowestRate.TestData
                     Program = "Quick Close",
                     ProgramRateAdjustment = -0.1
                 },
-                new underwriterInformation
+                new UnderwriterInformation
                 {
                     PeriodEnd = new DateTime(2016, 9, 14, 23, 59, 59),
                     PeriodStart = new DateTime(2016, 9, 1, 0, 0, 0),
@@ -42,7 +42,7 @@ namespace MCAP.Nova.LowestRate.TestData
                     Program = "Standard",
                     ProgramRateAdjustment = -0.05
                 },
-                new underwriterInformation
+                new UnderwriterInformation
                 {
                     PeriodEnd = new DateTime(2016, 9, 14, 23, 59, 59),
                     PeriodStart = new DateTime(2016, 9, 1, 0, 0, 0),
@@ -51,7 +51,7 @@ namespace MCAP.Nova.LowestRate.TestData
                     Program = "Quick Close",
                     ProgramRateAdjustment = -0.1
                 },
-                new underwriterInformation
+                new UnderwriterInformation
                 {
                     PeriodEnd = new DateTime(2016, 9, 30, 23, 59, 59),
                     PeriodStart = new DateTime(2016, 9, 15, 0, 0, 0),
@@ -60,7 +60,7 @@ namespace MCAP.Nova.LowestRate.TestData
                     Program = "Standard",
                     ProgramRateAdjustment = -0.15
                 },
-                new underwriterInformation
+                new UnderwriterInformation
                 {
                     PeriodEnd = new DateTime(2016, 9, 30, 23, 59, 59),
                     PeriodStart = new DateTime(2016, 9, 15, 0, 0, 0),
@@ -69,7 +69,7 @@ namespace MCAP.Nova.LowestRate.TestData
                     Program = "Quick Close",
                     ProgramRateAdjustment = -0.22
                 },
-                new underwriterInformation
+                new UnderwriterInformation
                 {
                     PeriodEnd = new DateTime(2016, 9, 30, 23, 59, 59),
                     PeriodStart = new DateTime(2016, 9, 15, 0, 0, 0),
@@ -78,7 +78,7 @@ namespace MCAP.Nova.LowestRate.TestData
                     Program = "Standard",
                     ProgramRateAdjustment = -0.15
                 },
-                new underwriterInformation
+                new UnderwriterInformation
                 {
                     PeriodEnd = new DateTime(2016, 9, 30, 23, 59, 59),
                     PeriodStart = new DateTime(2016, 9, 15, 0, 0, 0),
@@ -87,7 +87,7 @@ namespace MCAP.Nova.LowestRate.TestData
                     Program = "Quick Close",
                     ProgramRateAdjustment = -0.22
                 },
-                new underwriterInformation
+                new UnderwriterInformation
                 {
                     PeriodEnd = new DateTime(2016, 10, 2, 23, 59, 59),
                     PeriodStart = new DateTime(2016, 10, 1, 0, 0, 0),
@@ -96,7 +96,7 @@ namespace MCAP.Nova.LowestRate.TestData
                     Program = "Standard",
                     ProgramRateAdjustment = -0.15
                 },
-                new underwriterInformation
+                new UnderwriterInformation
                 {
                     PeriodEnd = new DateTime(2016, 10, 2, 23, 59, 59),
                     PeriodStart = new DateTime(2016, 10, 1, 0, 0, 0),
@@ -105,7 +105,7 @@ namespace MCAP.Nova.LowestRate.TestData
                     Program = "Quick Close",
                     ProgramRateAdjustment = -0.2
                 },
-                new underwriterInformation
+                new UnderwriterInformation
                 {
                     PeriodEnd = new DateTime(2016, 10, 2, 23, 59, 59),
                     PeriodStart = new DateTime(2016, 10, 1, 0, 0, 0),
@@ -114,7 +114,7 @@ namespace MCAP.Nova.LowestRate.TestData
                     Program = "Standard",
                     ProgramRateAdjustment = -0.15
                 },
-                new underwriterInformation
+                new UnderwriterInformation
                 {
                     PeriodEnd = new DateTime(2016, 10, 2, 23, 59, 59),
                     PeriodStart = new DateTime(2016, 10, 1, 0, 0, 0),
@@ -123,7 +123,7 @@ namespace MCAP.Nova.LowestRate.TestData
                     Program = "Quick Close",
                     ProgramRateAdjustment = -0.2
                 },
-                new underwriterInformation
+                new UnderwriterInformation
                 {
                     PeriodEnd = new DateTime(2016, 10, 31, 23, 59, 59),
                     PeriodStart = new DateTime(2016, 10, 3, 0, 0, 0),
@@ -132,7 +132,7 @@ namespace MCAP.Nova.LowestRate.TestData
                     Program = "Standard",
                     ProgramRateAdjustment = -0.15
                 },
-                new underwriterInformation
+                new UnderwriterInformation
                 {
                     PeriodEnd = new DateTime(2016, 10, 31, 23, 59, 59),
                     PeriodStart = new DateTime(2016, 10, 3, 0, 0, 0),
@@ -141,7 +141,7 @@ namespace MCAP.Nova.LowestRate.TestData
                     Program = "Quick Close",
                     ProgramRateAdjustment = -0.15
                 },
-                new underwriterInformation
+                new UnderwriterInformation
                 {
                     PeriodEnd = new DateTime(2016, 10, 31, 23, 59, 59),
                     PeriodStart = new DateTime(2016, 10, 3, 0, 0, 0),
@@ -150,7 +150,7 @@ namespace MCAP.Nova.LowestRate.TestData
                     Program = "Standard",
                     ProgramRateAdjustment = -0.15
                 },
-                new underwriterInformation
+                new UnderwriterInformation
                 {
                     PeriodEnd = new DateTime(2016, 10, 31, 23, 59, 59),
                     PeriodStart = new DateTime(2016, 10, 3, 0, 0, 0),
@@ -159,7 +159,7 @@ namespace MCAP.Nova.LowestRate.TestData
                     Program = "Quick Close",
                     ProgramRateAdjustment = -0.15
                 },
-                new underwriterInformation
+                new UnderwriterInformation
                 {
                     PeriodEnd = new DateTime(2016, 12, 31, 23, 59, 59),
                     PeriodStart = new DateTime(2016, 11, 1, 0, 0, 0),
@@ -168,7 +168,7 @@ namespace MCAP.Nova.LowestRate.TestData
                     Program = "Standard",
                     ProgramRateAdjustment = -0.05
                 },
-                new underwriterInformation
+                new UnderwriterInformation
                 {
                     PeriodEnd = new DateTime(2016, 12, 31, 23, 59, 59),
                     PeriodStart = new DateTime(2016, 11, 1, 0, 0, 0),
@@ -177,7 +177,7 @@ namespace MCAP.Nova.LowestRate.TestData
                     Program = "Quick Close",
                     ProgramRateAdjustment = -0.1
                 },
-                new underwriterInformation
+                new UnderwriterInformation
                 {
                     PeriodEnd = new DateTime(2016, 12, 31, 23, 59, 59),
                     PeriodStart = new DateTime(2016, 11, 1, 0, 0, 0),
@@ -186,7 +186,7 @@ namespace MCAP.Nova.LowestRate.TestData
                     Program = "Standard",
                     ProgramRateAdjustment = -0.05
                 },
-                new underwriterInformation
+                new UnderwriterInformation
                 {
                     PeriodEnd = new DateTime(2016, 12, 31, 23, 59, 59),
                     PeriodStart = new DateTime(2016, 11, 1, 0, 0, 0),

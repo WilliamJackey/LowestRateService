@@ -15,11 +15,11 @@ namespace MCAP.Nova.LowestRate.Services
     [System.ComponentModel.ToolboxItem(false)]
     // To allow this Web Service to be called from script, using ASP.NET AJAX, uncomment the following line. 
     // [System.Web.Script.Services.ScriptService]
-    public class LowestRate : System.Web.Services.WebService
+    public class LowestRate : WebService
     {
-        private IinMemoryData m_inMemoryTestDataService = new inMemoryData();
+        private IInMemoryData m_inMemoryTestDataService = new InMemoryData();
 
-        public IinMemoryData InMemoryTestDataService
+        public IInMemoryData InMemoryTestDataService
         {
             get
             {
@@ -32,12 +32,12 @@ namespace MCAP.Nova.LowestRate.Services
         }
 
         [WebMethod]
-        public string calculateLowestRate(DateTime dtStartDate, DateTime dtEndDate)
+        public string CalculateLowestRate(DateTime dtStartDate, DateTime dtEndDate)
         {
             try
             {
                 var productList = InMemoryTestDataService.getProductData().ToList();
-                List<underwriterProduct> productRates = new List<underwriterProduct>();
+                List<UnderwriterProduct> productRates = new List<UnderwriterProduct>();
 
                 #region verify input parameter
                 var dtMinDate = (from item in productList
@@ -65,7 +65,7 @@ namespace MCAP.Nova.LowestRate.Services
                 #region calculate rate for every product
                 foreach (var classificationItem in classificationResults)
                 {
-                    underwriterProduct tempProduct = new underwriterProduct();
+                    UnderwriterProduct tempProduct = new UnderwriterProduct();
                     double dblRate = 0;
                     foreach (var item in classificationItem.productGroup)
                     {

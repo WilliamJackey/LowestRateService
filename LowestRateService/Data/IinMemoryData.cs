@@ -6,8 +6,8 @@ using System.Web;
 
 namespace MCAP.Nova.LowestRate.TestData
 {
-    public interface IinMemoryData
+    public interface IInMemoryData
     {
-        IQueryable<underwriterInformation> getProductData();
+        IQueryable<UnderwriterInformation> getProductData();
     }
 }

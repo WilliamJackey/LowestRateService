@@ -14,7 +14,7 @@ namespace MCAP.Nova.LowestRate.UnitTests
     public class LowestRateTest
     {
         private readonly Services.LowestRate m_serviceRepository;
-        private readonly Mock<IinMemoryData> m_dataRepositoryMock = new Mock<IinMemoryData>();
+        private readonly Mock<IInMemoryData> m_dataRepositoryMock = new Mock<IInMemoryData>();
 
         public LowestRateTest()
         {
@@ -27,10 +27,10 @@ namespace MCAP.Nova.LowestRate.UnitTests
             DateTime dtTestStartDate = new DateTime(2016, 9, 1, 0, 0, 0);
             DateTime dtTestEndDate = new DateTime(2016, 9, 14, 23, 59, 59);
 
-            m_dataRepositoryMock.Setup(m => m.getProductData()).Returns((IQueryable<underwriterInformation>)null);
+            m_dataRepositoryMock.Setup(m => m.getProductData()).Returns((IQueryable<UnderwriterInformation>)null);
             m_serviceRepository.InMemoryTestDataService = m_dataRepositoryMock.Object;
 
-            var szResult = m_serviceRepository.calculateLowestRate(dtTestStartDate, dtTestEndDate);
+            var szResult = m_serviceRepository.CalculateLowestRate(dtTestStartDate, dtTestEndDate);
             szResult.Should().Contain("Internal exception");
         }
 
@@ -40,7 +40,7 @@ namespace MCAP.Nova.LowestRate.UnitTests
             DateTime dtTestStartDate = new DateTime(2016, 9, 1, 0, 0, 0);
             DateTime dtTestEndDate = new DateTime(2016, 9, 14, 23, 59, 59);
 
-            var testData = Builder<underwriterInformation>
+            var testData = Builder<UnderwriterInformation>
                 .CreateListOfSize(2)
                 .TheFirst(1)
                 .With(item => item.PeriodStart = dtTestStartDate)
@@ -56,13 +56,13 @@ namespace MCAP.Nova.LowestRate.UnitTests
             m_dataRepositoryMock.Setup(m => m.getProductData()).Returns(Queryable.AsQueryable(testData));
 
             m_serviceRepository.InMemoryTestDataService = m_dataRepositoryMock.Object;
-            var szResult1 = m_serviceRepository.calculateLowestRate(dtTestStartDate.AddDays(-9), dtTestEndDate);
+            var szResult1 = m_serviceRepository.CalculateLowestRate(dtTestStartDate.AddDays(-9), dtTestEndDate);
             szResult1.Should().Contain("wrong date range");
 
-            var szResult2 = m_serviceRepository.calculateLowestRate(dtTestStartDate, dtTestEndDate.AddDays(9));
+            var szResult2 = m_serviceRepository.CalculateLowestRate(dtTestStartDate, dtTestEndDate.AddDays(9));
             szResult2.Should().Contain("wrong date range");
 
-            var szResult3 = m_serviceRepository.calculateLowestRate(dtTestEndDate, dtTestStartDate);
+            var szResult3 = m_serviceRepository.CalculateLowestRate(dtTestEndDate, dtTestStartDate);
             szResult3.Should().Contain("wrong date range");
         }
 
@@ -72,7 +72,7 @@ namespace MCAP.Nova.LowestRate.UnitTests
             DateTime dtTestStartDate = new DateTime(2016, 9, 1, 0, 0, 0);
             DateTime dtTestEndDate = new DateTime(2016, 9, 14, 23, 59, 59);
 
-            var testData = Builder<underwriterInformation>
+            var testData = Builder<UnderwriterInformation>
                 .CreateListOfSize(3)
                 .TheFirst(1)
                 .With(item => item.PeriodStart = dtTestStartDate)
@@ -99,7 +99,7 @@ namespace MCAP.Nova.LowestRate.UnitTests
             m_dataRepositoryMock.Setup(m => m.getProductData()).Returns(Queryable.AsQueryable(testData));
 
             m_serviceRepository.InMemoryTestDataService = m_dataRepositoryMock.Object;
-            var szResult = m_serviceRepository.calculateLowestRate(dtTestStartDate, dtTestEndDate);
+            var szResult = m_serviceRepository.CalculateLowestRate(dtTestStartDate, dtTestEndDate);
             szResult.Should().Contain("10 Year");
             szResult.Should().Contain("standard");
             szResult.Should().Contain("2.9");
